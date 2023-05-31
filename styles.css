@@ -1,4 +1,4 @@
-body {
+body, h3, h1 {
     margin:0px;
     padding:0px;
     border:0px;
@@ -14,8 +14,9 @@ body {
     display:grid;
     grid-auto-flow: row;
     grid-auto-rows: 1fr;
-    background-color: aliceblue;
+    background-color: rgba(253, 193, 72, 0.9);
     grid-column: 2;
+    border-bottom: outset 3px;
 }
 
 .avatar {
@@ -27,15 +28,27 @@ body {
 }
 
 #content {
-    background-color: #a7f3d0;
+    display:grid;
+    grid-template-columns: 2.7fr 1fr;
+    grid-template-rows: 5rem 9fr;
+    gap: 10px 20px;
+    background-color: rgba(204, 204, 204, 0.795);
+    align-items: start;
+    padding-bottom:20px;
+}
+
+#content > span{
+    margin-top:auto;
+    margin-left:20px;
+    margin-bottom: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #sidebar {
     grid-row:1/-1;
-    background-color: #14532d;
+    background-color: #0617d1;
     display: grid;
     grid-auto-flow: row;
-    align-items: start;
     grid-template-rows: 100px;
     grid-auto-rows: 62px;
     gap:18px;
@@ -43,19 +56,23 @@ body {
 }
 
 .tabs {
-    margin:auto;
+    display:flex;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+    padding-left: 20px;
 }
 
 .title {
     align-self: start;
     margin: 35px 0px 35px;
+    margin:auto;
 }
 
 .title, .tabs{
-    text-align: center;
     font-size: 2rem;
-    color:#fbcfe8;
     font-weight: bold;
+    color:white;
 }
 
 .searchbar{
@@ -79,7 +96,7 @@ body {
     height: 35px;
     outline:none;
     border: 0px solid;
-    background-color: rgba(128, 128, 128, 0.34);
+    background-color: rgba(128, 128, 128, 0.55);
     padding-left: 15px;
     font-size: 1.3rem;
     letter-spacing: 1px;
@@ -130,4 +147,63 @@ img.icon{
     color:white;
     font-weight: bold;
 
+}
+
+.cards {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap:35px 47px;   
+    padding-left: 20px;
+    grid-auto-rows: 300px;
+}
+
+.card {
+    background-color: rgb(255, 255, 255);
+    padding:20px 45px ;
+    height: 300px;
+    border-left: inset 10px orangered;
+    border-radius: 20px;
+    display:grid;
+    grid-template-rows: 1fr 43px;
+    row-gap: 12px;
+    box-sizing: border-box;
+}
+
+.card .card-text,
+.nounces .card-text {
+    font-size: 1.2rem;
+    margin:0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+.card h1,
+.nounces h2{
+    margin: 10px 0px;
+    white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-opts{
+    height: 35px;
+    width:auto;
+}
+
+.nounces {
+    margin:0px 30px 10px;
+    padding: 25px 30px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    display:grid;
+    grid-auto-flow: row;
+    grid-auto-rows: 180px;
+    gap:20px;
+}
+
+.announcement{
+    border-bottom: 2px rgba(0, 0, 0, 0.34) solid;
+    height: 170px;
+    margin-bottom: 1.5lh;
 }
